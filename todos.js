@@ -3,16 +3,22 @@ function validateForm() {
   let x = document.getElementById("add-task").value;
   if (x == "") {
     document.getElementById("error").innerHTML="Must be filled out..";
-    x.focus();
     return false;
   }
+  else
+  {
+  document.getElementById("error").innerHTML="";
   CreateTask();
+
+  }
 }
     function CreateTask()
-    {  
+    {   var today= new Date();
          var task=document.getElementById("add-task").value;
+         //var newtask=task+today;
          mytodo_list.push(task);
          ReadAllTask();
+         document.getElementById("add-task").value="";
     }
     
     function ReadAllTask()
@@ -21,7 +27,7 @@ function validateForm() {
     for(var i=0;i<mytodo_list.length;i++)
     {
         data+='<tr>';
-        data+='<td>' + mytodo_list[i] + '</td>';
+        data+='<td class="tasklist">' + mytodo_list[i] + '</td>';
         data+='<td><button onclick=UpdateTask(' +i+ ')>Update</button></td>';
         data+='<td><button onclick=DeleteTask('+i+')>Delete</button></td>';
         data+='</tr>';
@@ -29,6 +35,7 @@ function validateForm() {
     storeData();
     document.getElementById("counter").innerHTML=mytodo_list.length +" Task";
     document.getElementById("mytodo-tasks").innerHTML=data;
+    
     }
     ReadAllTask();
     function UpdateTask(item)
@@ -39,7 +46,6 @@ function validateForm() {
     {
         var task=document.getElementById("update-task").value;
         mytodo_list.splice(item,1,task.trim());
-    
         ReadAllTask();
         CloseInput();
     }
