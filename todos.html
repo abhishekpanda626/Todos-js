@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="todos.css">  
+</head>
+<body>
+    
+    <script src="todos.js"> </script> 
+   <section class="mytodo-container">
+   <div class="mytodo-list">
+   <form action="javascript:void(0);" id="CreateForm">
+    <span id="error"></span> <br>
+    <input type="text"  id="add-task"  placeholder="New Task">
+ <input type="submit" onclick="validateForm()" value="Create">
+    </form>
+   <form action="javascript:void(0);" id="UpdateForm"> 
+    <input type="text" id="update-task"> <input type="submit"  id="closeinput" value="Update"> 
+    <a onclick="CloseInput()" id="close">&#10006;</a>
+</form>   
+   <p id="counter" class=""></p>
+    <table>
+    <tr><th class="display-7">My Todo List</th></tr>
+    <tbody id="mytodo-tasks"></tbody>
+    </table>
+    </div>
+    </section>
+</body>
+</html>

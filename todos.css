@@ -1,0 +1,33 @@
+body{
+  background: #c7eff570;
+}
+input[type='submit'],button,#close
+{
+ cursor: pointer;
+ border-radius: 6px;
+ color:  #fff;
+ font-family: sans-serif;
+ border-color: #0d6efd;
+ background-color: #0d6efd;
+ padding: 4px;
+}
+.mytodo-list
+{
+  width:320px;
+  margin:100px auto;
+}
+.counter
+{
+  margin: 10px 0;
+}
+#UpdateForm
+{   
+  display:none;
+}
+#error{
+  color: red;
+}
+#close{
+  color: red;
+  background: #c7eff570;
+}
