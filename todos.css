@@ -1,17 +1,8 @@
 body{
   background: #c7eff570;
 }
-.tasklist{
-  background-color: coral;
-  border: 0.4em;
-}
-.todolists-title{
-  text-decoration:solid;
-  color: slateblue;
-  font-size: 16px;
-  font-weight:bold;
-}
-input[type='submit'],button,#close
+
+input[type='submit'],button
 {
  cursor: pointer;
  border-radius: 6px;
@@ -21,23 +12,9 @@ input[type='submit'],button,#close
  background-color: #0d6efd;
  padding: 4px;
 }
-.mytodo-list
-{
-  width:320px;
-  margin:100px auto;
-}
-.counter
-{
-  margin: 10px 0;
-}
-#UpdateForm
-{   
-  display:none;
-}
 #error{
   color: red;
 }
-#close{
-  color: red;
-  background: #c7eff570;
+#update_btn{
+  display:none;
 }
